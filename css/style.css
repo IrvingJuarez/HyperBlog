@@ -3,3 +3,60 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100vw;
+    min-height: 100vh;
+
+    font-size: 2rem;
+    font-family: system-ui;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    padding: 24px;
+
+    box-shadow: 1px 1px 6px grey;
+}
+header h2{
+    font-size: 3rem;
+    font-weight: 400;
+}
+header nav{
+    height: 45px;
+    width: fit-content;
+}
+header nav, header nav form, header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav form{
+    background-color: #e4e4e4;
+    border-radius: 10px;
+}
+header nav form input[type="text"]{
+    padding: 6px;
+    font-size: 1.8rem;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    outline: none;
+}
+header nav ul a{
+    color: black;
+}
+.fa{
+    padding: 0 8px;
+}
+.fa input{
+    display: none;
+}
