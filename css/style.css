@@ -1,3 +1,7 @@
+:root{
+    --secondaryColor: #e4e4e4;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -41,13 +45,13 @@ header nav, header nav form, header nav ul{
     justify-content: space-between;
 }
 header nav form{
-    background-color: #e4e4e4;
+    background-color: var(--secondaryColor);
     border-radius: 10px;
 }
 header nav form input[type="text"]{
     padding: 6px;
     font-size: 1.8rem;
-    border: 1px solid #e4e4e4;
+    border: 1px solid var(--secondaryColor);
     border-radius: 10px;
     outline: none;
 }
@@ -59,4 +63,12 @@ header nav ul a{
 }
 .fa input{
     display: none;
+}
+
+footer{
+    width: 90%;
+    padding: 30px;
+
+    text-align: center;
+    border-top: 1px solid var(--secondaryColor);
 }
