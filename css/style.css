@@ -161,3 +161,22 @@ a{
     margin: 0 auto;
     background-color: rgb(185, 185, 185);
 }
+
+.admin-main{
+    width: 500px;
+    height: fit-content;
+    border-radius: 15px;
+    border: 1px solid #e4e4e4;
+}
+.admin-main form{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+.admin-main form > *{
+    margin: 5px 0;
+}
+.admin-main form > input{
+    padding: 9px;
+    font-size: 1.9rem;
+}
