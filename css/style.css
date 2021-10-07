@@ -105,10 +105,31 @@ footer{
     height: 100%;
 }
 .card-content_text{
+    position: relative;
     width: 500px;
+    height: 100%;
 }
 .index_card-status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 40px;
     border-top: 1px solid var(--secondaryColor);
+}
+.text-info{
+    position: absolute;
+    bottom: 0;
+}
+.status_ul{
+    display: flex;
+    list-style: none;
+}
+.status_ul li{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+.status_ul li > *{
+    margin: 0 3px;
 }

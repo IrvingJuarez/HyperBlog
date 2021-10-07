@@ -11,8 +11,8 @@
     <?php require "templates/header.php"; ?>
 
     <main class="main-index">
-        <article class="index_card">
-            <section class="index_card-content">
+        <section class="index_card">
+            <article class="index_card-content">
                 <div class="card-content_img-container">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVq5gKeP5kmrMJvbix207u-bWF3YD2mLdh4yc60hiKtbW0nIXbwEsuNmpVwV2zXXnEl8&usqp=CAU" alt="">
                 </div>
@@ -21,13 +21,26 @@
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione culpa quibusdam architecto velit amet voluptates. Ex, architecto? Ipsum incidunt sit illo. Culpa, voluptatum! Accusamus ad hic illo officia veritatis.
                     </p>
+
+                    <span class="text-info">Author, <i>1/12/2019</i></span>
                 </div>
-            </section>
+            </article>
 
-            <section class="index_card-status">
+            <article class="index_card-status">
+                <ul class="status_ul">
+                    <li>
+                        <i class="far fa-heart"></i>
+                        <p>10</p>
+                    </li>
+                    <li>
+                        <i class="far fa-comment"></i>
+                        <p>9</p>
+                    </li>
+                </ul>
 
-            </section>
-        </article>
+                <a class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
+            </article>
+        </section>
     </main>
 
     <?php require "templates/footer.php"; ?>
