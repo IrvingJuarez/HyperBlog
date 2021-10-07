@@ -13,16 +13,18 @@
     <main class="main-index">
         <section class="index_card">
             <article class="index_card-content">
-                <div class="card-content_img-container">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVq5gKeP5kmrMJvbix207u-bWF3YD2mLdh4yc60hiKtbW0nIXbwEsuNmpVwV2zXXnEl8&usqp=CAU" alt="">
-                </div>
+                <a href="post.php">
+                    <div class="card-content_img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVq5gKeP5kmrMJvbix207u-bWF3YD2mLdh4yc60hiKtbW0nIXbwEsuNmpVwV2zXXnEl8&usqp=CAU" alt="">
+                    </div>
+                </a>
                 <div class="card-content_text">
-                    <h3>The crypto revolution</h3>
+                    <h3><a href="post.php">The crypto revolution</a></h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ratione culpa quibusdam architecto velit amet voluptates. Ex, architecto? Ipsum incidunt sit illo. Culpa, voluptatum! Accusamus ad hic illo officia veritatis.
                     </p>
 
-                    <span class="text-info">Author, <i>1/12/2019</i></span>
+                    <span class="text-info"><a href="author.php">Author</a>, <i>1/12/2019</i></span>
                 </div>
             </article>
 
@@ -38,12 +40,11 @@
                     </li>
                 </ul>
 
-                <a class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
+                <a href="post.php" class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
             </article>
         </section>
     </main>
 
     <?php require "templates/footer.php"; ?>
-    <script src="https://kit.fontawesome.com/d125d34573.js" crossorigin="anonymous"></script>
 </body>
 </html>
