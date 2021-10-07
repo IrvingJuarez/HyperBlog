@@ -138,3 +138,26 @@ a{
     text-decoration: none;
     color: initial;
 }
+
+.post-main{
+    width: 900px;
+    margin: 50px 0;
+}
+.post-header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.post-header > *{
+    padding: 3px 0;
+}
+
+.post-body > p{
+    margin: 12px 0;
+}
+.body_img-container{
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgb(185, 185, 185);
+}

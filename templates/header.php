@@ -1,5 +1,5 @@
 <header>
-    <h2><a href="post.php"> Hyper Blog </a></h2>
+    <h2><a href="index.php"> Hyper Blog </a></h2>
 
     <nav>
         <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="GET">
