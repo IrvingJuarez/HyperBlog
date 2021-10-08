@@ -2,13 +2,29 @@
 
 session_start();
 
-if( isset( $_POST['submit'] ) ){
+$errors = "";
+
+function clean($variable){
+    $variable = filter_var($variable, FILTER_SANITIZE_STRING);
+    $variable = htmlspecialchars( $variable );
+    return $variable;
+}
+
+function nonEmpty($variable, $msg){
+    global $errors;
+
+    if( empty($variable) ){
+        $errors .= "<span class='err'>Please add a $msg</span>";
+    }
+}
+
+function connect(){
     $connection = new mysqli("localhost", "root", "", "blog", 8080);
 
     if( $connection->errno == 0 ){
         echo "OK";
     }else{
-        $errors = "There was an error with the database, try later.";
+        echo "There was an error with the database, try later.";
     }
 }
 

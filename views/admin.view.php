@@ -15,14 +15,28 @@
             <h2>Welcome</h2>
         <?php else: ?>
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="POST">
-                <label for="user">User</label>
-                <input type="text" name="user" id="user">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<?php echo !empty($errors) && isset($email) ? $email : ""; ?>">
     
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" value="<?php echo ( !empty($errors) && isset($password) ) ? $password : ""; ?>">
     
                 <?php
-                    echo $errors ?? "";
+                    if( isset( $_POST['submit'] ) ){
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+
+                        nonEmpty($email, "Email");
+                        nonEmpty($password, "Password");
+
+                        if( empty($errors) ){
+                            $_POST['email'] = clean($email);
+                            $_POST['password'] = clean($password);
+                            connect();
+                        }else{
+                            echo $errors;
+                        }
+                    }
                 ?>
 
                 <input type="submit" name="submit" value="Access">

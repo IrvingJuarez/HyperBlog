@@ -180,3 +180,9 @@ a{
     padding: 9px;
     font-size: 1.9rem;
 }
+
+.err{
+    font-size: 1.7rem;
+    color: red;
+    text-decoration: underline;
+}
