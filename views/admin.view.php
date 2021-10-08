@@ -21,6 +21,10 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password">
     
+                <?php
+                    echo $errors ?? "";
+                ?>
+
                 <input type="submit" name="submit" value="Access">
             </form>
         <?php endif; ?>
