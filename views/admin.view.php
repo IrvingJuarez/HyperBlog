@@ -12,7 +12,7 @@
 
     <main class="admin-main">
         <?php if( isset( $_SESSION['user'] ) ): ?>
-            <h2>Welcome</h2>
+            <h2>Welcome, <?php echo $_SESSION['user']; ?></h2>
         <?php else: ?>
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="POST">
                 <label for="email">Email</label>

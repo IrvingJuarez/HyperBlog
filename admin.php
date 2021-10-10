@@ -27,16 +27,13 @@ function connect(){
         $statement->bind_param("ss", $_POST['email'], $_POST['password']);
         $statement->execute();
 
-        $query = $statement->fetch();
-        if($query){
-            $result = $statement->get_result(); 
-            $_SESSION['name'] = $result->fetch_assoc()['name'];
-            echo $_SESSION['name'];
+        $query = $statement->get_result();
+        if($query->num_rows >= 1){
+            $_SESSION['user'] = $query->fetch_assoc()['name'];
+            header("Location: admin.php");
         }else{
             echo "<span class='err'>Either the email or the password are wrong</span>";
         }
-        echo "<pre>";
-        print_r($query);
     }else{
         echo "There was an error with the database, try later.";
     }
