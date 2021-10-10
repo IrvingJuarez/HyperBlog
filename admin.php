@@ -22,7 +22,21 @@ function connect(){
     $connection = new mysqli("localhost", "root", "", "blog", 8080);
 
     if( $connection->errno == 0 ){
-        echo "OK";
+        $sql = "SELECT * FROM admins WHERE email = ? and password = ?";
+        $statement = $connection->prepare($sql);
+        $statement->bind_param("ss", $_POST['email'], $_POST['password']);
+        $statement->execute();
+
+        $query = $statement->fetch();
+        if($query){
+            $result = $statement->get_result(); 
+            $_SESSION['name'] = $result->fetch_assoc()['name'];
+            echo $_SESSION['name'];
+        }else{
+            echo "<span class='err'>Either the email or the password are wrong</span>";
+        }
+        echo "<pre>";
+        print_r($query);
     }else{
         echo "There was an error with the database, try later.";
     }
