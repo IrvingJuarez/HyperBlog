@@ -163,15 +163,22 @@ a{
 }
 
 .admin-main{
-    width: 500px;
-    height: fit-content;
-    border-radius: 15px;
-    border: 1px solid #e4e4e4;
+    display: grid;
+    place-items: center;
+    width: 90%;
+    max-width: 900px;
+    min-height: 500px;
+    margin: 30px 0;
 }
 .admin-main form{
+    width: 500px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     padding: 12px;
+
+    border-radius: 15px;
+    border: 1px solid #e4e4e4;
 }
 .admin-main form > *{
     margin: 5px 0;
@@ -179,6 +186,11 @@ a{
 .admin-main form > input{
     padding: 9px;
     font-size: 1.9rem;
+}
+.admin-main_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .err{

@@ -12,7 +12,10 @@
 
     <main class="admin-main">
         <?php if( isset( $_SESSION['user'] ) ): ?>
-            <h2>Welcome, <?php echo $_SESSION['user']; ?></h2>
+            <section class="admin-main_header">
+                <h2>Welcome, <?php echo $_SESSION['user']; ?></h2>
+                <a class="logout" href="logout.php">Logout</a>
+            </section>
         <?php else: ?>
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="POST">
                 <label for="email">Email</label>
