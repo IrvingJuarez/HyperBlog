@@ -16,15 +16,13 @@
         <?php else: ?>
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="POST">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" value="<?php echo !empty($errors) && isset($email) ? $email : ""; ?>">
+                <input type="email" name="email" id="email" value="<?php echo $email ?? ""; ?>">
     
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" value="<?php echo ( !empty($errors) && isset($password) ) ? $password : ""; ?>">
+                <input type="password" name="password" id="password" value="<?php echo $password ?? ""; ?>">
     
                 <?php
                     if( isset( $_POST['submit'] ) ){
-                        $email = $_POST['email'];
-                        $password = $_POST['password'];
 
                         nonEmpty($email, "Email");
                         nonEmpty($password, "Password");
