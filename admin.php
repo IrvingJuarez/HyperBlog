@@ -49,7 +49,18 @@ if( isset($_SESSION['user']) ){
     if( $articlesConnection->errno ){
         $articlesList = "<span>Sorry, there was an error with the database</span>";
     }else{
-        $articlesList = "<span>The connection to the database was successful</span>";
+        $sql = "SELECT title from articles";
+        $query = $articlesConnection->prepare($sql);
+        $query->execute();
+
+        $result = $query->get_result();
+
+        if($result->num_rows >= 1){
+            $articlesList = "<span>There are articles</span>";
+        }else{
+            $articlesList = "<span><p>There are no articles yet.</p> <br> <a href='new-article.php' class='new-article'>Create a new article</a></span>";
+        }
+
     }
 }
 

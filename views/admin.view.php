@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="admin_body_content">
-                        <?php echo $articlesList; ?>
+                        <?php echo $articlesList ?? ""; ?>
                     </div>
                 </article>
             </section>
