@@ -11,6 +11,7 @@
     <?php require "templates/header.php"; ?>
 
     <main class="new-article_main">
+        <h2>Create a new post</h2>
         <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
             <section>
                 <label for="title">Title</label>
@@ -27,10 +28,10 @@
                 <input type="file" name="img" id="img">
             </section>
 
-            <section>
+            <div class="new-article_form-btns">
                 <input type="submit" name="upload" value="Upload">
                 <input type="button" name="save" value="Save">
-            </section>
+            </div>
         </form>
     </main>
 

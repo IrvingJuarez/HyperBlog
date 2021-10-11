@@ -252,6 +252,49 @@ a{
     display: initial;
 }
 
+.new-article_main > h2{
+    margin-bottom: 22px;
+}
+.new-article_main > form{
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid var(--secondaryColor);
+    border-radius: 15px;
+}
+.new-article_main > form > section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+.new-article_main > form > section > label{
+    margin-bottom: 5px;
+}
+.new-article_main > form > section > input[type=text], .new-article_main > form > section > textarea{
+    padding: 9px;
+    font-size: 1.7rem;
+    font-family: sans-serif;
+    resize: none;
+}
+.new-article_main > form > section > textarea{
+    height: 300px;
+}
+.new-article_form-btns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+.new-article_form-btns > input{
+    margin: 0 9px;
+    padding: 6px;
+
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    background: none;
+}
+
+
 .err{
     font-size: 1.7rem;
     color: red;
