@@ -188,9 +188,51 @@ a{
     font-size: 1.9rem;
 }
 .admin-main_header{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.admin-main_body{
+    padding: 0 0 12px 0;
+    border-bottom: 1px solid var(--secondaryColor);
+}
+.panel-control-main{
+    width: 100%;
+    height: 100%;
+}
+.admin_body_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+.admin_body_header > h2{
+    font-weight: 300;
+    font-size: 2.9rem;
+}
+.admin_body_header > a{
+    padding: 6px 12px;
+
+    /* border: 1px solid var(--secondaryColor); */
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+.admin-header-menu{
+    position: absolute;
+    right: 0;
+    top: 28px;
+    display: none;
+    list-style: none;
+    background-color: red;
+}
+.admin-header-menu:hover{
+    display: initial;
+}
+.hamburger-btn:hover .admin-header-menu{
+    display: initial;
 }
 
 .err{

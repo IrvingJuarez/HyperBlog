@@ -12,9 +12,26 @@
 
     <main class="admin-main">
         <?php if( isset( $_SESSION['user'] ) ): ?>
-            <section class="admin-main_header">
-                <h2>Welcome, <?php echo $_SESSION['user']; ?></h2>
-                <a class="logout" href="logout.php">Logout</a>
+            <section class="panel-control-main">
+                <article class="admin-main_header">
+                    <h2>Welcome, <?php echo $_SESSION['user']; ?></h2>
+                    <span class="hamburger-btn">
+                        <i class="fas fa-bars fa-lg"></i>
+                        
+                        <ul class="admin-header-menu">
+                            <li>Option 1</li>
+                            <li>Option 2</li>
+                            <!-- <a class="logout" href="logout.php">Logout</a> -->
+                            <!-- <a href="new-article.php">Create a new one</a> -->
+                        </ul>
+                    </span>
+                </article>
+
+                <article class="admin-main_body">
+                    <div class="admin_body_header">
+                        <h2>Current Articles</h2>
+                    </div>
+                </article>
             </section>
         <?php else: ?>
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="POST">
