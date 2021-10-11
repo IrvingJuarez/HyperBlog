@@ -58,6 +58,13 @@ header nav form input[type="text"]{
 header nav ul a{
     color: black;
 }
+main{
+    width: 90%;
+    max-width: 900px;
+    min-height: 500px;
+    margin: 30px 0;
+}
+
 .fa{
     padding: 0 8px;
 }
@@ -165,10 +172,6 @@ a{
 .admin-main{
     display: grid;
     place-items: center;
-    width: 90%;
-    max-width: 900px;
-    min-height: 500px;
-    margin: 30px 0;
 }
 .admin-main form{
     width: 500px;
