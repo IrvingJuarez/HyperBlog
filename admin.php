@@ -44,4 +44,13 @@ if( isset($_POST['submit']) ){
     $password = $_POST['password'];
 }
 
+if( isset($_SESSION['user']) ){
+    $articlesConnection = new mysqli("localhost", "root", "", "blog", 8080);
+    if( $articlesConnection->errno ){
+        $articlesList = "<span>Sorry, there was an error with the database</span>";
+    }else{
+        $articlesList = "<span>The connection to the database was successful</span>";
+    }
+}
+
 require "views/admin.view.php";

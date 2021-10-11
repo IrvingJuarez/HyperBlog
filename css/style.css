@@ -193,7 +193,7 @@ a{
     align-items: center;
     justify-content: space-between;
 }
-.admin-main_body{
+.admin_body_header{
     padding: 0 0 12px 0;
     border-bottom: 1px solid var(--secondaryColor);
 }
@@ -225,8 +225,13 @@ a{
     right: 0;
     top: 28px;
     display: none;
+
+    padding: 10px 30px 10px 10px;
     list-style: none;
-    background-color: red;
+    border: 1px solid var(--secondaryColor);
+}
+.admin-header-menu li{
+    margin: 5px 0;
 }
 .admin-header-menu:hover{
     display: initial;

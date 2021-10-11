@@ -17,12 +17,10 @@
                     <h2>Welcome, <?php echo $_SESSION['user']; ?></h2>
                     <span class="hamburger-btn">
                         <i class="fas fa-bars fa-lg"></i>
-                        
+
                         <ul class="admin-header-menu">
-                            <li>Option 1</li>
-                            <li>Option 2</li>
-                            <!-- <a class="logout" href="logout.php">Logout</a> -->
-                            <!-- <a href="new-article.php">Create a new one</a> -->
+                            <li><a class="logout" href="logout.php">Logout</a></li>
+                            <li><a href="new-article.php">Create a new one</a></li>
                         </ul>
                     </span>
                 </article>
@@ -30,6 +28,10 @@
                 <article class="admin-main_body">
                     <div class="admin_body_header">
                         <h2>Current Articles</h2>
+                    </div>
+
+                    <div class="admin_body_content">
+                        <?php echo $articlesList; ?>
                     </div>
                 </article>
             </section>
