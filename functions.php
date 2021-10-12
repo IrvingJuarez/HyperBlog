@@ -7,3 +7,11 @@ function clear($variable){
     $variable = htmlspecialchars($variable);
     return $variable;
 }
+
+function nonEmpty($variable, $msg){
+    global $errors;
+
+    if( empty($variable) ){
+        $errors .= "<span class='err'>Please add a $msg</span>";
+    }
+}

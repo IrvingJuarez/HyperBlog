@@ -16,18 +16,35 @@
         <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
             <section>
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Add a title">
+                <input type="text" name="title" id="title" placeholder="Add a title" value="<?php echo $title ?? ""; ?>">
             </section>
 
             <section>
                 <label for="content">Content</label>
-                <textarea name="content" id="content" placeholder="Add the content"></textarea>
+                <textarea name="content" id="content" placeholder="Add the content"><?php echo $content ?? ""; ?></textarea>
             </section>
 
             <section>
                 <label for="img">Add an image for the cover</label>
                 <article class="new-post_cover-img"><i class="fas fa-camera fa-2x"></i></article>
                 <input type="file" name="img" id="img">
+            </section>
+
+            <section>
+                <?php
+
+                    if( isset($_POST['upload']) ){
+                        nonEmpty($title, "Title");
+                        nonEmpty($content, "Content");
+
+                        if($errors){
+                            echo $errors;
+                        }else{
+                            echo "OK";
+                        }
+                    }
+
+                ?>
             </section>
 
             <div class="new-article_form-btns">

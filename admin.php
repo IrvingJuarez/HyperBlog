@@ -2,17 +2,9 @@
 
 session_start();
 
-require "functions.php";
-
 $errors = "";
 
-function nonEmpty($variable, $msg){
-    global $errors;
-
-    if( empty($variable) ){
-        $errors .= "<span class='err'>Please add a $msg</span>";
-    }
-}
+require "functions.php";
 
 function connect(){
     $connection = new mysqli("localhost", "root", "", "blog", 8080);
