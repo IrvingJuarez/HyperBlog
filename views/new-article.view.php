@@ -11,6 +11,7 @@
     <?php require "templates/header.php"; ?>
 
     <main class="new-article_main">
+        <a class="new-article_return-arrow" href="admin.php"><i class="fas fa-arrow-left fa-lg"></i></a>
         <h2>Create a new post</h2>
         <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
             <section>
@@ -25,12 +26,13 @@
 
             <section>
                 <label for="img">Add an image for the cover</label>
+                <article class="new-post_cover-img"><i class="fas fa-camera fa-2x"></i></article>
                 <input type="file" name="img" id="img">
             </section>
 
             <div class="new-article_form-btns">
                 <input type="submit" name="upload" value="Upload">
-                <input type="button" name="save" value="Save">
+                <!-- <input type="button" name="save" value="Save"> -->
             </div>
         </form>
     </main>

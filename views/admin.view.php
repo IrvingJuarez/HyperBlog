@@ -50,8 +50,8 @@
                         nonEmpty($password, "Password");
 
                         if( empty($errors) ){
-                            $_POST['email'] = clean($email);
-                            $_POST['password'] = clean($password);
+                            $_POST['email'] = clear($email);
+                            $_POST['password'] = clear($password);
                             connect();
                         }else{
                             echo $errors;

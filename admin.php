@@ -2,13 +2,9 @@
 
 session_start();
 
-$errors = "";
+require "functions.php";
 
-function clean($variable){
-    $variable = filter_var($variable, FILTER_SANITIZE_STRING);
-    $variable = htmlspecialchars( $variable );
-    return $variable;
-}
+$errors = "";
 
 function nonEmpty($variable, $msg){
     global $errors;

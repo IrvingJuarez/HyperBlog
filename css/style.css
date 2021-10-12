@@ -297,6 +297,27 @@ a{
     font-size: 1.5rem;
     background: none;
 }
+.new-article_return-arrow{
+    display: block;
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid var(--secondaryColor);
+}
+
+.new-post_cover-img{
+    display: grid;
+    place-items: center;
+    width: 300px;
+    height: 200px;
+    margin: 10px 0;
+    background-color: #e4e4e4;
+    opacity: 0.6;
+}
+.new-post_cover-img:hover{
+    opacity: 1;
+}
 
 
 .err{
