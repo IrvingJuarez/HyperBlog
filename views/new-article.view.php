@@ -25,9 +25,15 @@
             </section>
 
             <section>
-                <label for="img">Add an image for the cover</label>
-                <article class="new-post_cover-img"><i class="fas fa-camera fa-2x"></i></article>
-                <input type="file" name="img" id="img">
+                <label for="photo">Add an image for the cover</label>
+                <article class="new-post_cover-img">
+                    <?php if( isset($_FILES['img']) ): ?>
+                        <img src="<?php echo $_FILES['img']['tmp_name']; ?>" alt="">
+                    <?php else: ?>
+                        <i class="fas fa-camera fa-2x"></i>
+                    <?php endif; ?>
+                </article>
+                <input type="file" name="photo" id="photo">
             </section>
 
             <section>
@@ -40,7 +46,7 @@
                         if($errors){
                             echo $errors;
                         }else{
-                            upload();
+                            upload($title, $content);
                         }
                     }
 
