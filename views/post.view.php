@@ -19,6 +19,10 @@
             </nav>
         </section>
         <section class="post-body">
+            <article class="body_img-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVq5gKeP5kmrMJvbix207u-bWF3YD2mLdh4yc60hiKtbW0nIXbwEsuNmpVwV2zXXnEl8&usqp=CAU" alt="">
+            </article>
+
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, cupiditate adipisci? Corrupti maxime vero maiores reiciendis incidunt cum quae culpa expedita? Eum, laboriosam! Illum enim sed aliquid facere ducimus velit similique reiciendis voluptas culpa in, aliquam, at quibusdam rem saepe molestiae fugiat consectetur eaque perspiciatis laborum accusantium illo cupiditate nihil. Ex inventore natus unde, rerum voluptatem, architecto neque explicabo eos, quae nisi incidunt deleniti suscipit. 
             </p>
@@ -30,10 +34,6 @@
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni provident vitae maxime sit quo illo quos animi nemo sequi doloremque, facere pariatur quaerat eius ipsam recusandae hic fuga commodi iure error nobis ullam dolorum corporis esse. Facere, fugit dolorum, recusandae eveniet ad possimus fuga accusamus voluptatum temporibus distinctio modi?
             </p>
-
-            <div class="body_img-container">
-                <img src="" alt="">
-            </div>
 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo natus, a eveniet fuga sit numquam et voluptatum quasi laborum sint debitis ea iure ut eum unde aspernatur iste iusto atque cupiditate amet fugit inventore, quam dicta. Libero optio obcaecati repudiandae. Excepturi, illum minima numquam aspernatur nulla illo possimus quisquam, voluptatum laborum exercitationem voluptas vel.

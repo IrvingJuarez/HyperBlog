@@ -163,13 +163,17 @@ a{
     margin: 12px 0;
 }
 .body_img-container{
-    width: 350px;
-    height: 200px;
+    width: 450px;
+    height: 250px;
     margin: 0 auto;
     background-color: rgb(185, 185, 185);
+    overflow: hidden;
+}
+.body_img-container > img{
+    width: 100%;
 }
 
-.admin-main{
+.admin-main, .body_img-container{
     display: grid;
     place-items: center;
 }
