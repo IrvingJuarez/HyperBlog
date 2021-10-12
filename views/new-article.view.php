@@ -46,7 +46,7 @@
                         if($errors){
                             echo $errors;
                         }else{
-                            upload($title, $content);
+                            photoComprobation();
                         }
                     }
 

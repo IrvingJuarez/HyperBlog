@@ -4,17 +4,21 @@ $errors = "";
 
 require "functions.php";
 
-function upload($title, $text){
+function photoComprobation(){
+    if( !empty($_FILES) ){
+        echo "Non empty";
+    }else{
+        echo "Empty";
+    }
+}
+
+function upload($title, $text, $img){
     $connection = dbConnection();
 
     if($connection){
         $title = clear($title);
         $text = clear($text);
-        if( $_FILES["photo"]["tmp_name"] ){
-            echo "OK";
-        }else{
-            echo "<span class='err'>Please add a <i>photo</i> to upload</span>";
-        }
+        echo $img["photo"]["name"];
     }else{
         echo "<span class='err'>Sorry, problems with the data base, we are working on that :)</span>";
     }
