@@ -1,5 +1,14 @@
 <?php
 
+function dbConnection(){
+    $connect = new mysqli("localhost", "root", "", "blog", 8080);
+    if( $connect->errno == 0 ){
+        return $connect;
+    }else{
+        return false;
+    }
+}
+
 function clear($variable){
     $variable = filter_var($variable, FILTER_SANITIZE_STRING);
     $variable = trim($variable);

@@ -7,9 +7,9 @@ $errors = "";
 require "functions.php";
 
 function connect(){
-    $connection = new mysqli("localhost", "root", "", "blog", 8080);
+    $connection = dbConnection();
 
-    if( $connection->errno == 0 ){
+    if( $connection ){
         $sql = "SELECT * FROM admins WHERE email = ? and password = ?";
         $statement = $connection->prepare($sql);
         $statement->bind_param("ss", $_POST['email'], $_POST['password']);

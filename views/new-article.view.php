@@ -40,7 +40,7 @@
                         if($errors){
                             echo $errors;
                         }else{
-                            echo "OK";
+                            upload();
                         }
                     }
 
