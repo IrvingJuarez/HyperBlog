@@ -17,18 +17,26 @@ function upload($title, $content){
     $content = clear($content);
     if($_FILES["photo"]["tmp_name"]){
         $cover = "imgs/".$_FILES["photo"]["name"];
-        move_uploaded_file($_FILES["photo"]["tmp_name"], $cover);
     }else{
         $cover = "imgs/ether.jpg";
     }
 
-    // $connection = dbConnection();
-
-    // if($connection){
-    //     @code
-    // }else{
-    //     echo "<span class='err'>Sorry, problems with the data base, we are working on that :)</span>";
-    // }
+    $connection = dbConnection();
+    if($connection){
+        $sql = "INSERT INTO articles VALUES(null, ?, ?, null, ?)";
+        $statement = $connection->prepare($sql);
+        $statement->bind_param("sss", $title, $content, $cover);
+        $statement->execute();
+        
+        if($connection->affected_rows >= 1){
+            move_uploaded_file($_FILES["photo"]["tmp_name"], $cover);
+            header("Location: admin.php");
+        }else{
+            echo "<span class='err'>There was an error with the db. Try later.</span>";
+        }
+    }else{
+        echo "<span class='err'>Sorry, problems with the data base, we are working on that :)</span>";
+    }
 }
 
 if( isset($_POST['upload']) ){
