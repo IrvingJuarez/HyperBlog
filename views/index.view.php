@@ -11,7 +11,14 @@
     <?php require "templates/header.php"; ?>
 
     <main class="main-index">
-        <section class="index_card">
+        <?php
+            if( !empty($errors) ){
+                echo $errors;
+            }else{
+                echo "<span>There are articles, but I will show them to you later</span>";
+            }
+        ?>
+        <!-- <section class="index_card">
             <article class="index_card-content">
                 <a href="post.php">
                     <div class="card-content_img-container">
@@ -42,7 +49,7 @@
 
                 <a href="post.php" class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
             </article>
-        </section>
+        </section> -->
     </main>
 
     <?php require "templates/footer.php"; ?>
