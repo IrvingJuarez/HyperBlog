@@ -119,6 +119,10 @@ footer{
     width: 500px;
     height: 100%;
 }
+.card-content_text > p{
+    height: 107px;
+    overflow: hidden;
+}
 .index_card-status{
     display: flex;
     align-items: center;
