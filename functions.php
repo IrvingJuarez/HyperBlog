@@ -1,5 +1,15 @@
 <?php
 
+function dateFormat($timestamp){
+    $timestamp = strtotime($timestamp);
+
+    $day = date("d", $timestamp);
+    $month = date("m", $timestamp);
+    $year = date("y", $timestamp);
+
+    return "$day/$month/$year";
+}
+
 function dbConnection(){
     $connect = new mysqli("localhost", "root", "", "blog", 8080);
     if( $connect->errno == 0 ){

@@ -28,7 +28,7 @@
                                 <?php echo nl2br($article['content']); ?>
                             </p>
     
-                            <span class="text-info"><a href="author.php">Irving Juárez</a>, <i><?php echo $article["date"]; ?></i></span>
+                            <span class="text-info"><a href="author.php">Irving Juárez</a>, <i><?php echo dateFormat($article["date"]); ?></i></span>
                         </div>
                     </article>
     
@@ -36,12 +36,12 @@
                         <ul class="status_ul">
                             <li>
                                 <i class="far fa-heart"></i>
-                                <p>10</p>
+                                <p>0</p>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <i class="far fa-comment"></i>
                                 <p>9</p>
-                            </li>
+                            </li> -->
                         </ul>
     
                         <a href="post.php" class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
