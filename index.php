@@ -14,8 +14,6 @@ if($connection){
 
     if($result->num_rows == 0){
         $errors .= "<span>There are no published articles yet.</span>";
-    }else{
-        echo ":)";
     }
 }else{
     $errors .= "<span class='err'>Sorry, there was a mistake with the data base connection</span>";
