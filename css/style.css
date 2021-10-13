@@ -135,19 +135,32 @@ footer{
     position: absolute;
     bottom: 0;
 }
-.status_ul{
+.index_card-status > form{
     display: flex;
     list-style: none;
 }
-.status_ul li{
-    display: flex;
-    align-items: center;
-    padding: 6px;
-}
-.status_ul li > *{
-    margin: 0 3px;
+.index_card-status > form > button{
+    display: grid;
+    width: 20px;
+    margin-right: 5px;
+
+    cursor: pointer;
+    place-items: center;
 }
 
+.resetButton, .resetButton:hover{
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+} 
+.resetButton:active {
+    outline: none;
+    border: none;
+} 
+.resetButton:focus {
+    outline: 0;
+}
 a{
     text-decoration: none;
     color: initial;

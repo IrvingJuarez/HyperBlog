@@ -33,16 +33,14 @@
                     </article>
     
                     <article class="index_card-status">
-                        <ul class="status_ul">
-                            <li>
-                                <i class="far fa-heart"></i>
-                                <p>0</p>
-                            </li>
-                            <!-- <li>
-                                <i class="far fa-comment"></i>
-                                <p>9</p>
-                            </li> -->
-                        </ul>
+                        <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
+                            <button type="submit" class="resetButton" name="like">
+                                <i class="far fa-heart fa-lg"></i>
+                            </button>
+                            <p><?php echo $article['likes']; ?></p>
+                            <input type="hidden" name="currentLikes" value="<?php echo $article['likes'] ?>">
+                            <input type="hidden" name="title" value="<?php echo $article['title']; ?>">
+                        </form>
     
                         <a href="post.php?title=<?php echo $article["title"]; ?>" class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
                     </article>

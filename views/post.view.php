@@ -11,6 +11,7 @@
     <?php require "templates/header.php"; ?>
 
     <main class="post-main">
+        <a class="new-article_return-arrow" href="index.php"><i class="fas fa-arrow-left fa-lg"></i></a>
         <?php if( !empty($errors) ): ?>
             <?php echo $errors; ?>
         <?php else: ?>
