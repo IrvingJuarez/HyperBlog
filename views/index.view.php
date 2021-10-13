@@ -35,7 +35,13 @@
                     <article class="index_card-status">
                         <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
                             <button type="submit" class="resetButton" name="like">
-                                <i class="far fa-heart fa-lg"></i>
+                                <?php
+                                    if($article['likes'] == 0){
+                                        echo "<i class='far fa-heart fa-lg'></i>";
+                                    }else{
+                                        echo "<i style='color:#a39090;' class='fas fa-heart fa-lg'></i>";
+                                    }
+                                ?>
                             </button>
                             <p><?php echo $article['likes']; ?></p>
                             <input type="hidden" name="currentLikes" value="<?php echo $article['likes'] ?>">
