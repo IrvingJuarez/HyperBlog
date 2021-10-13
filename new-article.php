@@ -13,8 +13,7 @@ function photoComprobation(){
 }
 
 function upload($title, $content){
-    $title = clear($title);
-    $content = clear($content);
+    $title = clear($title); 
     if($_FILES["photo"]["tmp_name"]){
         $cover = "imgs/".$_FILES["photo"]["name"];
     }else{

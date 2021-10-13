@@ -17,13 +17,13 @@
             <?php while($article = $result->fetch_assoc()): ?>
                 <section class="index_card">
                     <article class="index_card-content">
-                        <a href="post.php">
+                        <a href="post.php?title=<?php echo $article["title"]; ?>">
                             <div class="card-content_img-container">
                                 <img src="<?php echo $article["img"]; ?>" alt="<?php echo $article["title"]; ?>">
                             </div>
                         </a>
                         <div class="card-content_text">
-                            <h3><a href="post.php"><?php echo $article["title"]; ?></a></h3>
+                            <h3><a href="post.php?title=<?php echo $article["title"]; ?>"><?php echo $article["title"]; ?></a></h3>
                             <p>
                                 <?php echo nl2br($article['content']); ?>
                             </p>
@@ -44,7 +44,7 @@
                             </li> -->
                         </ul>
     
-                        <a href="post.php" class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
+                        <a href="post.php?title=<?php echo $article["title"]; ?>" class="status_anchor">See the post<i class="fa fa-arrow-right"></i></a>
                     </article>
                 </section>
             <?php endwhile; ?>
