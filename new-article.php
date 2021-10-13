@@ -12,16 +12,23 @@ function photoComprobation(){
     }
 }
 
-function upload($title, $text, $img){
-    $connection = dbConnection();
-
-    if($connection){
-        $title = clear($title);
-        $text = clear($text);
-        echo $img["photo"]["name"];
+function upload($title, $content){
+    $title = clear($title);
+    $content = clear($content);
+    if($_FILES["photo"]["tmp_name"]){
+        $cover = "imgs/".$_FILES["photo"]["name"];
+        move_uploaded_file($_FILES["photo"]["tmp_name"], $cover);
     }else{
-        echo "<span class='err'>Sorry, problems with the data base, we are working on that :)</span>";
+        $cover = "imgs/ether.jpg";
     }
+
+    // $connection = dbConnection();
+
+    // if($connection){
+    //     @code
+    // }else{
+    //     echo "<span class='err'>Sorry, problems with the data base, we are working on that :)</span>";
+    // }
 }
 
 if( isset($_POST['upload']) ){

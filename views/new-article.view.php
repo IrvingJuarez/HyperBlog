@@ -28,7 +28,7 @@
                 <label for="photo">Add an image for the cover</label>
                 <article class="new-post_cover-img">
                     <?php if( isset($_FILES['img']) ): ?>
-                        <img src="<?php echo $_FILES['img']['tmp_name']; ?>" alt="">
+                        <img src="<?php echo $_FILES['photo']['tmp_name']; ?>" alt="">
                     <?php else: ?>
                         <i class="fas fa-camera fa-2x"></i>
                     <?php endif; ?>
@@ -46,7 +46,7 @@
                         if($errors){
                             echo $errors;
                         }else{
-                            photoComprobation();
+                            upload($title, $content);
                         }
                     }
 
