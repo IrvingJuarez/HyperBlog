@@ -5,8 +5,8 @@ $errors = "";
 require "functions.php";
 
 function photoComprobation(){
-    if( !empty($_FILES) ){
-        echo "Non empty";
+    if( $_FILES["photo"]["tmp_name"] ){
+        echo $_FILES["photo"]["name"];
     }else{
         echo "Empty";
     }

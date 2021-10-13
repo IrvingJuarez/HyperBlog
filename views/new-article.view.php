@@ -13,7 +13,7 @@
     <main class="new-article_main">
         <a class="new-article_return-arrow" href="admin.php"><i class="fas fa-arrow-left fa-lg"></i></a>
         <h2>Create a new post</h2>
-        <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST">
+        <form action="<?php echo htmlspecialchars( $_SERVER['PHP_SELF'] ); ?>" method="POST" enctype="multipart/form-data">
             <section>
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" placeholder="Add a title" value="<?php echo $title ?? ""; ?>">
