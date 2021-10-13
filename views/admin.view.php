@@ -31,7 +31,25 @@
                     </div>
 
                     <div class="admin_body_content">
-                        <?php echo $articlesList ?? ""; ?>
+                        <?php if( !empty($errors) ): ?>
+                            <?php echo $errors; ?>
+                        <?php else: ?>
+                            <?php while($article = $result->fetch_assoc()): ?>
+                                <section>
+                                    <article>
+                                        <h2><?php echo $article['title']; ?></h2>
+                                    </article>
+
+                                    <article>
+                                        <ul>
+                                            <li><a href="">Edit</a></li>
+                                            <li><a href="">See</a></li>
+                                            <li><a href="">Remove</a></li>
+                                        </ul>
+                                    </article>
+                                </section>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </article>
             </section>
