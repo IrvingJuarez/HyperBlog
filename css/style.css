@@ -339,6 +339,32 @@ a{
     opacity: 1;
 }
 
+.admin_body_content-article-slot{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    padding: 5px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+.admin_body_content-article-slot h2{
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+.admin_body_content-article-slot ul{
+    display: flex;
+    list-style: none;
+}
+.admin_body_content-article-slot li{
+    margin-right: 10px;
+}
+.admin_body_content-article-slot a{
+    font-weight: 300;
+}
+.admin_body_content-article-slot a:hover{
+    text-decoration: underline;
+}
+
 
 .err{
     font-size: 1.7rem;

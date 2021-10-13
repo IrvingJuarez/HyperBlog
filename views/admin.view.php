@@ -35,7 +35,7 @@
                             <?php echo $errors; ?>
                         <?php else: ?>
                             <?php while($article = $result->fetch_assoc()): ?>
-                                <section>
+                                <section class="admin_body_content-article-slot">
                                     <article>
                                         <h2><?php echo $article['title']; ?></h2>
                                     </article>
@@ -43,7 +43,7 @@
                                     <article>
                                         <ul>
                                             <li><a href="">Edit</a></li>
-                                            <li><a href="">See</a></li>
+                                            <li><a href="http://localhost/HyperBlog/post.php?title=<?php echo $article['title']; ?>">See</a></li>
                                             <li><a href="">Remove</a></li>
                                         </ul>
                                     </article>
