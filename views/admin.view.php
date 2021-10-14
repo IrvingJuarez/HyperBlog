@@ -42,8 +42,8 @@
 
                                     <article>
                                         <ul>
-                                            <li><a href="">Edit</a></li>
-                                            <li><a href="http://localhost/HyperBlog/post.php?title=<?php echo $article['title']; ?>">See</a></li>
+                                            <li><a href="edit.php?title=<?php echo $article['title']; ?>">Edit</a></li>
+                                            <li><a href="post.php?title=<?php echo $article['title']; ?>">See</a></li>
                                             <li><a href="">Remove</a></li>
                                         </ul>
                                     </article>
