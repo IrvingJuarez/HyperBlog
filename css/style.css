@@ -334,6 +334,10 @@ a{
     margin: 10px 0;
     background-color: #e4e4e4;
     opacity: 0.6;
+    overflow: hidden;
+}
+.new-post_cover-img img{
+    width: 100%;
 }
 .new-post_cover-img:hover{
     opacity: 1;
