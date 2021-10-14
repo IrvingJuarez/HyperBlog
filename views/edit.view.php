@@ -20,6 +20,7 @@
                     <section>
                         <label for="title">Title</label>
                         <input type="text" name="title" id="title" value="<?php echo $article['title']; ?>">
+                        <input type="hidden" name="currentTitle" value="<?php echo $article['title']; ?>">
                     </section>
         
                     <section>
@@ -32,7 +33,8 @@
                         <article class="new-post_cover-img">
                             <img src="<?php echo $article['img']; ?>" alt="">
                         </article>
-                        <input type="file" name="photo" id="photo" value="<?php echo $article['img']; ?>">
+                        <input type="file" name="photo" id="photo">
+                        <input type="hidden" name="currentPhoto" value="<?php echo $article['img']; ?>">
                     </section>
         
                     <section>
@@ -53,8 +55,8 @@
                     </section>
         
                     <div class="new-article_form-btns">
-                        <input type="submit" name="upload" value="Upload">
-                        <!-- <input type="button" name="save" value="Save"> -->
+                        <!-- <input type="submit" name="upload" value="Upload"> -->
+                        <input type="submit" name="save" value="Save">
                     </div>
                 </form>
             <?php endwhile; ?>
