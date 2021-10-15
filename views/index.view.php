@@ -56,5 +56,6 @@
     </main>
 
     <?php require "templates/footer.php"; ?>
+    <script src="js/ajax.js"></script>
 </body>
 </html>
