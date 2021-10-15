@@ -1,3 +1,7 @@
 <?php
 
-echo "<script>console.log('Hi there from PHP file')</script>";
+require "../functions.php";
+
+$likeNum = $_POST['like'];
+
+echo $likeNum;

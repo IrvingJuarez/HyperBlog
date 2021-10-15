@@ -10,7 +10,7 @@ const addMessage = () => {
     let request = new XMLHttpRequest();
     request.open("POST", "php/ajax.php");
 
-    let props = `like=${heart}`;
+    let props = "like="+heart.textContent;
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 
     request.onload = () => {
@@ -19,7 +19,7 @@ const addMessage = () => {
 
     request.onreadystatechange = () => {
         if(request.readyState == 4 && request.status == 200){
-            console.log("Everything is just fine");
+            console.log(request.responseText)
         }
     }
 
